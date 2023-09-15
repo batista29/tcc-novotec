@@ -14,21 +14,26 @@ header {
     height: 10vh;
     width: 100%;
     border-bottom: 1px solid rgb(255, 255, 255);
-    ;
     justify-content: center;
     align-items: center;
 }
 
 h1 {
     color: rgb(255, 255, 255);
-    ;
     font-size: 6vh;
 }
 
 main {
     display: flex;
     justify-content: center;
-    margin-top: 20vh;
+}
+
+.materiaDiv {
+    display: flex;
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+    justify-content: center;
+    width: 100%;
 }
 
 .divPrincipal {
@@ -42,7 +47,6 @@ main {
     height: 30vh;
     width: 30vh;
     margin: 1vh 1vh 1vh 1vh;
-    background-color: rgb(212, 234, 255);
     border: 5px solid rgb(95, 145, 245);
 }
 
@@ -55,7 +59,43 @@ main {
 
 .imghtml {
     height: 100%;
+}
 
+.btnMudar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.escolherMateria{
+    margin-top: 2vh;
+    height: 5vh;
+    width: 20vh;
+    font-size: 4vh;
+    background-color: white;
+    border: 2px solid rgb(95, 145, 245);
+}
+
+.escolherMateria:hover{
+    background-color: rgb(16, 28, 53);
+    border: 2px solid  white;
+    color: white;
+}
+
+img{
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(5px);
+}
+
+img:hover{
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
 }
 
 /* .pergunta2{
