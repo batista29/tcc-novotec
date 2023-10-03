@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizUp</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="carregar()">
+
+    <header>
+        <h1>QUIZzUP</h1>
+    </header>
+    <div class="materiaDiv">
+        <h1>RESULTADO:</h1>
+    </div>
+    <main>
+
+        <div class="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+
+            function carregar() {
+                let value = []
+                let resp1 = localStorage.getItem('resps');
+                let resp2 = localStorage.getItem('resp2');
+                let resp3 = localStorage.getItem('resp3');
+                let resp4 = localStorage.getItem('resp4');
+                let resp5 = localStorage.getItem('resp5');
+
+                let total = Number(resp1) + Number(resp2) + Number(resp3) + Number(resp4) + Number(resp5)
+                let result_acertos = (total / 5) * 100
+                let result_faltou = 100 - result_acertos
+                console.log(result_faltou)
+
+
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['ACERTOS', 'ERROS'],
+                        datasets: [{
+                            label: '% de acertos',
+                            data: [result_acertos, result_faltou],
+                            backgroundColor: [
+                                '#3CB043',
+                                '#D0312D'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            customCanvasBackgroundColor: {
+                                color: 'lightGreen',
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+
+                    }
+
+                });
+            }
+        </script>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
