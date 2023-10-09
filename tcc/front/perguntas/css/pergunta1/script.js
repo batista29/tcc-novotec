@@ -6,7 +6,7 @@ botoesEscolha.forEach(botao => {
         const valorBotaoClicado = JSON.parse(botao.getAttribute('value'));
 
         // Você pode fazer o que quiser com o valor do botão clicado aqui
-        localStorage.setItem("resps", JSON.stringify(valorBotaoClicado));
+        localStorage.setItem("resp1", JSON.stringify(valorBotaoClicado));
     });
 });
 

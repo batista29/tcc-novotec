@@ -12,5 +12,5 @@ botoesEscolha.forEach(botao => {
 
 // Função para enviar a resposta
 function enviar(valorBotaoClicado) {
-
+    window.location.href = "../pergunta5/index.html"
 }
