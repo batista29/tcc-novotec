@@ -49,3 +49,28 @@ main {
     border-radius: 5%;
     border: 5px solid rgb(66, 69, 70);
 }
+
+
+.voltar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.voltar>button {
+    width: 15%;
+    height: 5vh;
+    font-size: 3vh;
+    font-weight: bold;
+    border: 3px solid rgb(95, 145, 245);
+    transition-duration: 1s;
+}
+
+.voltar>button:hover {
+    cursor: pointer;
+    transition-duration: 1s;
+    border-color: white;
+    background-color: black;
+    color: white;
+}

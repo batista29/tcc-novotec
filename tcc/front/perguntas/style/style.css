@@ -93,3 +93,11 @@ h2 {
     background-color: black;
     color: white;
 }
+
+.botaoSelecionado{
+    cursor: pointer;
+    transition-duration: 1s;
+    border-color: white;
+    background-color: black;
+    color: white;
+}
