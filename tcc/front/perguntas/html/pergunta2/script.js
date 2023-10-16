@@ -6,11 +6,11 @@ botoesEscolha.forEach(botao => {
         const valorBotaoClicado = botao.getAttribute('value');
         console.log(valorBotaoClicado);
         // Você pode fazer o que quiser com o valor do botão clicado aqui
-        localStorage.setItem("resp5", valorBotaoClicado);
+        localStorage.setItem("resp2", valorBotaoClicado);
     });
 });
 
 // Função para enviar a resposta
 function enviar(valorBotaoClicado) {
-    window.location.href = "../resultado/index.html"
+    window.location.href = "../pergunta3/index.html"
 }
