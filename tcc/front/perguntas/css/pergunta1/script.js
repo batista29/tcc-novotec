@@ -12,7 +12,8 @@ botoesEscolha.forEach(botao => {
 
 // Função para enviar a resposta
 function enviar(valorBotaoClicado) {
-    window.location.href = "../pergunta2/index.html"
+    let valor = localStorage.getItem('resp1');
+    // window.location.href = "../pergunta2/index.html"
 }
 
 function carregar() {
