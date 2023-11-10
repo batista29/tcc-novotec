@@ -22,13 +22,34 @@ function carregar() {
 }
 
 function enviar() {
-    // Verifique se algum botão foi selecionado
     const botaoSelecionado = document.querySelector('.botaoSelecionado');
     if (botaoSelecionado) {
-        // Se um botão foi selecionado, envie a resposta e mude para a próxima tela
-        window.location.href = "../pergunta4/index.html";
+        const valorBotaoClicado = botaoSelecionado.getAttribute('value');
+        if (valorBotaoClicado === "1") {
+            showModal("Certa! Parabéns!", "green");
+        } else {
+            showModal("Questão errada! Depois tente novamente.", "red");
+        }
     } else {
-        // Se nenhum botão foi selecionado, exiba uma mensagem de erro ou faça algo apropriado
         console.log("Por favor, selecione uma opção antes de continuar.");
     }
 }
+
+function showModal(message, color) {
+    const modal = document.getElementById('modal');
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.innerText = message;
+    modalMessage.style.color = color;
+    modal.style.display = "block";
+
+    setTimeout(function() {
+        modal.style.display = "none";
+        window.location.href = "../pergunta4/index.html";
+    }, 2000);
+}
+
+const closeBtn = document.querySelector('.close');
+closeBtn.addEventListener('click', function() {
+    const modal = document.getElementById('modal');
+    modal.style.display = "none";
+});
