@@ -36,10 +36,11 @@
                 let resp5 = localStorage.getItem('resp5');
 
                 let total = Number(resp1) + Number(resp2) + Number(resp3) + Number(resp4) + Number(resp5)
+
+                console.log(resp5)
+
                 let result_acertos = (total / 5) * 100
                 let result_faltou = 100 - result_acertos
-                console.log(result_faltou)
-
 
                 const ctx = document.getElementById('myChart');
 

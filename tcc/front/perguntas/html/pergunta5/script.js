@@ -14,6 +14,7 @@ function carregar() {
 
             // Ao clicar no botão, obtenha o valor do botão clicado
             const valorBotaoClicado = botao.getAttribute('value');
+            console.log(valorBotaoClicado)
 
             // Você pode fazer o que quiser com o valor do botão clicado aqui
             localStorage.setItem("resp5", valorBotaoClicado);
@@ -26,30 +27,29 @@ function enviar() {
     if (botaoSelecionado) {
         const valorBotaoClicado = botaoSelecionado.getAttribute('value');
         if (valorBotaoClicado === "1") {
-            showModal("Certa! Parabéns!", "green");
+            mostrarRespostaModal("Certa! Parabéns!", "green");
         } else {
-            showModal("Questão errada! Depois tente novamente.", "red");
+            mostrarRespostaModal("Questão errada! Depois tente novamente.", "red");
         }
     } else {
         console.log("Por favor, selecione uma opção antes de continuar.");
     }
 }
 
-function showModal(message, color) {
-    const modal = document.getElementById('modal');
-    const modalMessage = document.getElementById('modal-message');
-    modalMessage.innerText = message;
-    modalMessage.style.color = color;
-    modal.style.display = "block";
+function mostrarRespostaModal(message, color) {
+    const respostaModal = document.getElementById('respostaModal');
+    const respostaModalMessage = document.getElementById('resposta-modal-message');
+    respostaModalMessage.innerText = message;
+    respostaModalMessage.style.color = color;
+    respostaModal.style.display = "block";
 
     setTimeout(function() {
-        modal.style.display = "none";
+        respostaModal.style.display = "none";
         window.location.href = "../resultado/index.html";
     }, 2000);
 }
 
-const closeBtn = document.querySelector('.close');
-closeBtn.addEventListener('click', function() {
-    const modal = document.getElementById('modal');
-    modal.style.display = "none";
-});
+function fecharRespostaModal() {
+    const respostaModal = document.getElementById('respostaModal');
+    respostaModal.style.display = "none";
+}
