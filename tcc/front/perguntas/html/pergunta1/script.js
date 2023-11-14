@@ -1,3 +1,5 @@
+let perguntaRespondida = false;
+
 function carregar() {
     // Selecione todos os botões com a classe 'escolha' e adicione um evento de clique a cada um
     const botoesEscolha = document.querySelectorAll('.escolha');
@@ -21,31 +23,28 @@ function carregar() {
     });
 }
 
-function enviar() {
-    const botaoSelecionado = document.querySelector('.botaoSelecionado');
-    if (botaoSelecionado) {
-        const valorBotaoClicado = botaoSelecionado.getAttribute('value');
-        if (valorBotaoClicado === "1") {
-            mostrarRespostaModal("Certa! Parabéns!", "green");
+function enviarResposta(valor) {
+    if (!document.querySelector('.botaoSelecionado')) {
+        const respostaModal = document.getElementById('respostaModal');
+        const respostaModalMessage = document.getElementById('resposta-modal-message');
+
+        if (valor === 1) {
+            respostaModalMessage.innerText = "Certa! Parabéns!";
+            respostaModalMessage.style.color = "green";
         } else {
-            mostrarRespostaModal("Questão errada! Depois tente novamente.", "red");
+            respostaModalMessage.innerText = "Questão errada! Depois tente novamente.";
+            respostaModalMessage.style.color = "red";
         }
+
+        respostaModal.style.display = "flex";
+
+        setTimeout(function() {
+            respostaModal.style.display = "none";
+            window.location.href = "../pergunta2/index.html";
+        }, 2000);
     } else {
-        console.log("Por favor, selecione uma opção antes de continuar.");
+        console.log("Por favor, selecione uma opção antes de continuar ou a pergunta já foi respondida.");
     }
-}
-
-function mostrarRespostaModal(message, color) {
-    const respostaModal = document.getElementById('respostaModal');
-    const respostaModalMessage = document.getElementById('resposta-modal-message');
-    respostaModalMessage.innerText = message;
-    respostaModalMessage.style.color = color;
-    respostaModal.style.display = "block";
-
-    setTimeout(function() {
-        respostaModal.style.display = "none";
-        window.location.href = "../pergunta2/index.html";
-    }, 2000);
 }
 
 function fecharRespostaModal() {
