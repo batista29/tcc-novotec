@@ -19,38 +19,40 @@
     </div>
     <main>
         <div class="divPrincipal">
-            <button class="escolha escolha1" value="0" onclick="enviarResposta(0)">
+            <button class="escolha escolha1" value="0">
                 <div class="pergunta1 divEscolha">
                     <h2>dl</h2>
                 </div>
             </button>
-            <button class="escolha escolha2" value="1" onclick="enviarResposta(1)">
+            <button class="escolha escolha2" value="1">
                 <div class="pergunta2 divEscolha">
                     <h2>ol</h2>
                 </div>
             </button>
-            <button class="escolha escolha3" value="0" onclick="enviarResposta(0)">
+            <button class="escolha escolha3" value="0">
                 <div class="pergunta3 divEscolha">
                     <h2>ul</h2>
                 </div>
             </button>
-            <button class="escolha escolha4" value="0" onclick="enviarResposta(0)">
+            <button class="escolha escolha4" value="0">
                 <div class="pergunta4 divEscolha">
                     <h2>li</h2>
                 </div>
             </button>
         </div>
     </main>
+    <div class="enviarResp">
+        <button onclick="enviar()">RESPONDER</button>
+    </div>
     
-    <!-- Modal único para respostas -->
-    <div id="respostaModal" class="respostaModal">
-        <div class="respostaModal-content">
+    <!-- Novo modal específico para respostas -->
+    <div id="respostaModal" class="modal">
+        <div class="modal-content">
             <span class="close" onclick="fecharRespostaModal()">&times;</span>
             <p id="resposta-modal-message"></p>
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
-
+<script src="script.js"></script>
 </html>
