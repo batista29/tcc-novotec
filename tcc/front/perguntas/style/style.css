@@ -102,7 +102,7 @@ h2 {
     color: white;
 }
 
-.respostaModal {
+#modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -112,15 +112,18 @@ h2 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.respostaModal-content {
+.modal-content {
     background-color: #fefefe;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     text-align: center;
+}
+
+p {
+    font-size: larger;
 }
