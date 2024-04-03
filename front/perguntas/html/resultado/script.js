@@ -4,5 +4,5 @@ function voltar() {
     localStorage.setItem("resp3", null);
     localStorage.setItem("resp4", null);
     localStorage.setItem("resp5", null);
-    window.location.href = "../../../pag1/index.html"
+    window.location.href = "../../../../index.html"
 }

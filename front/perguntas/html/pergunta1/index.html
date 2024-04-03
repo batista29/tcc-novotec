@@ -15,28 +15,28 @@
         <h1>QUIZzUP</h1>
     </header>
     <div class="materiaDiv">
-        <h1>Qual atributo HTML é usado para definir um hiperlink?</h1>
+        <h1>Qual tag HTML é usada para criar uma lista ordenada?</h1>
     </div>
     <main>
         <div class="divPrincipal">
             <button class="escolha escolha1" value="0">
                 <div class="pergunta1 divEscolha">
-                    <h2>link</h2>
+                    <h2>dl</h2>
                 </div>
             </button>
-            <button class="escolha escolha2" value="0">
+            <button class="escolha escolha2" value="1">
                 <div class="pergunta2 divEscolha">
-                    <h2>url</h2>
+                    <h2>ol</h2>
                 </div>
             </button>
-            <button class="escolha escolha3" value="1">
+            <button class="escolha escolha3" value="0">
                 <div class="pergunta3 divEscolha">
-                    <h2>href</h2>
+                    <h2>ul</h2>
                 </div>
             </button>
             <button class="escolha escolha4" value="0">
                 <div class="pergunta4 divEscolha">
-                    <h2>src</h2>
+                    <h2>li</h2>
                 </div>
             </button>
         </div>
@@ -45,10 +45,10 @@
         <button onclick="enviar()">RESPONDER</button>
     </div>
     
-    <div id="respostaModal" class="modal">
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="fecharRespostaModal()">&times;</span>
-            <p id="resposta-modal-message"></p>
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
         </div>
     </div>
 

@@ -14,10 +14,9 @@ function carregar() {
 
             // Ao clicar no botão, obtenha o valor do botão clicado
             const valorBotaoClicado = botao.getAttribute('value');
-            console.log(valorBotaoClicado)
 
             // Você pode fazer o que quiser com o valor do botão clicado aqui
-            localStorage.setItem("resp5", valorBotaoClicado);
+            localStorage.setItem("resp4", valorBotaoClicado);
         });
     });
 }
@@ -37,15 +36,15 @@ function enviar() {
 }
 
 function mostrarRespostaModal(message, color) {
-    const respostaModal = document.getElementById('respostaModal');
-    const respostaModalMessage = document.getElementById('resposta-modal-message');
-    respostaModalMessage.innerText = message;
-    respostaModalMessage.style.color = color;
-    respostaModal.style.display = "block";
+    const modal = document.getElementById('modal');
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.innerText = message;
+    modalMessage.style.color = color;
+    modal.style.display = "flex";
 
     setTimeout(function() {
-        respostaModal.style.display = "none";
-        window.location.href = "../resultado/index.html";
+        modal.style.display = "none";
+        window.location.href = "../pergunta5/index.html";
     }, 2000);
 }
 

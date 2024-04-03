@@ -15,40 +15,41 @@
         <h1>QUIZzUP</h1>
     </header>
     <div class="materiaDiv">
-        <h1>Qual elemento HTML é usado para criar um parágrafo?</h1>
+        <h1>Qual tag HTML é usada para inserir uma quebra de linha?</h1>
     </div>
     <main>
         <div class="divPrincipal">
             <button class="escolha escolha1" value="0">
                 <div class="pergunta1 divEscolha">
-                    <h2>para</h2>
+                    <h2>break</h2>
                 </div>
             </button>
-            <button class="escolha escolha2" value="1">
+            <button class="escolha escolha2" value="0">
                 <div class="pergunta2 divEscolha">
-                    <h2>p</h2>
+                    <h2>lb</h2>
                 </div>
             </button>
             <button class="escolha escolha3" value="0">
                 <div class="pergunta3 divEscolha">
-                    <h2>pg</h2>
+                    <h2>newline</h2>
                 </div>
             </button>
-            <button class="escolha escolha4" value="0">
+            <button class="escolha escolha4" value="1">
                 <div class="pergunta4 divEscolha">
-                    <h2>par</h2>
+                    <h2>br</h2>
                 </div>
             </button>
         </div>
     </main>
+
     <div class="enviarResp">
         <button onclick="enviar()">RESPONDER</button>
     </div>
     
-    <div id="respostaModal" class="modal">
+    <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="fecharRespostaModal()">&times;</span>
-            <p id="resposta-modal-message"></p>
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
         </div>
     </div>
 
